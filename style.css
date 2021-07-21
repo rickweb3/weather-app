@@ -82,6 +82,7 @@ h1 {
     margin-bottom: 5px;
 }
 .tempInfo,
+.iconDescription,
 .ventoInfo {
     color: #FFF;
     font-size: 30px;
@@ -91,6 +92,15 @@ h1 {
     font-size: 15px;
     font-weight: normal;
 }
+
+.iconDescription {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-bottom: 15px;
+
+}
+
 .ventoInfo span {
     font-size: 15px;
     font-weight: normal;

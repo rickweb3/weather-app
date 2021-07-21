@@ -20,6 +20,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
                 tempIcon: json.weather[0].icon,
                 windSpeed: json.wind.speed,
                 windAngle: json.wind.deg,
+                iconDescription: json.weather[0].description
             });
         } else {
             clearInfo();
@@ -41,6 +42,9 @@ function showInfo(json) {
     document.querySelector('.ventoInfo').innerHTML = `${json.windSpeed} <span>km/h</span>`;
 
     document.querySelector('.temp img').setAttribute('src', `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
+
+    let capitalized = json.iconDescription[0].toUpperCase() + json.iconDescription.substr(1);
+    document.querySelector('.iconDescription').innerHTML = `${capitalized}`;
 
     document.querySelector('.ventoPonto').style.transform = `rotate(${json.windAngle - 90}deg)`;
 
